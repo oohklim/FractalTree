@@ -11,9 +11,9 @@ public void draw()
 {   
 	background(0, 0, 90);
 	stroke(0);
-	strokeWeight(10);   
+	strokeWeight(8);   
 	line(320,480,320,380);
-	drawBranches(320,380,90,3*Math.PI/2,10);
+	drawBranches(320,380,90,3*Math.PI/2,8);
 	if(smallestBranch > 8 && keyPressed == false)
 		smallestBranch--; 
 }
