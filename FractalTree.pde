@@ -1,7 +1,7 @@
 private double fractionLength = .8; 
 private double smallestBranch = 50; 
-private double branchAngle = .3;
-private double fractionStroke = .8;
+private double branchAngle = .4;
+private double fractionStroke = .72;
 public void setup() 
 {   
 	size(640,480);  
@@ -11,11 +11,11 @@ public void draw()
 {   
 	background(0, 0, 90);
 	stroke(0);
-	strokeWeight(8);   
+	strokeWeight(20);   
 	line(320,480,320,380);
-	drawBranches(320,380,90,3*Math.PI/2,8);
-	if(smallestBranch > 8 && keyPressed == false)
-		smallestBranch--; 
+	drawBranches(320,380,90,3*Math.PI/2,22);
+	if(smallestBranch > 6 && keyPressed == false)
+		smallestBranch--;
 }
 public void keyPressed()
 {
@@ -29,6 +29,10 @@ public void drawBranches(int x,int y, double branchLength, double angle, double 
 {   
 	if(sW > 1)
 		sW *= fractionStroke;
+	if(branchLength < 20)
+		stroke(0, 30 + (int)Math.random()*16, 90 + (int)Math.random()*11);
+	else
+		stroke(0);
 	strokeWeight((float)sW);
 	double angle1 = angle + branchAngle;
 	double angle2 = angle - branchAngle;
