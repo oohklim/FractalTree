@@ -1,5 +1,5 @@
 private double fractionLength = .8; 
-private double smallestBranch = 50; 
+private double smallestBranch = 80; 
 private double branchAngle = .4;
 private double fractionStroke = .72;
 private double bLength = 90;
@@ -20,15 +20,15 @@ public void draw()
 }
 public void keyPressed()
 {
-  if(key == 'a' && branchAngle < .7)
+  if(key == 'a')
     branchAngle+=.01;
-  if(key == 'd' && branchAngle > .3)
+  if(key == 'd')
     branchAngle-=.01;
   if(key == 'q' &&  bLength < 100)
     bLength+=2;
   if(key == 'e' && bLength > 70)
     bLength-=2;
-  smallestBranch = 50;
+  smallestBranch = 80;
 }
 public void drawBranches(int x,int y, double branchLength, double angle, double sW) 
 {   
